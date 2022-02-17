@@ -1,0 +1,28 @@
+﻿<Page
+    x:Class="Asignment_UWP.Pages.Navigation"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Asignment_UWP.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <NavigationView ItemInvoked="NavigationView_ItemInvoked">
+            <NavigationView.MenuItems>
+                <NavigationViewItem Content="Profile" Icon="Account" Tag="profile" />
+                <NavigationViewItem Content="Lates Song" Icon="Audio" Tag="latesSong" />
+                <NavigationViewItem Content="My Song" Icon="Audio" Tag="mySong" />
+                <NavigationViewItem Content="Add Song" Icon="Add" Tag="createSong" />
+                <NavigationViewItem Content="Logout" Icon="Back" Tag="logout" />
+            </NavigationView.MenuItems>
+            <NavigationView.AutoSuggestBox>
+                <AutoSuggestBox x:Name="NavViewSearchBox" QueryIcon="Find" />
+            </NavigationView.AutoSuggestBox>
+            <ScrollViewer>
+                <Frame x:Name="MainContent" Padding="5" Margin="5"></Frame>
+            </ScrollViewer>
+        </NavigationView>
+    </Grid>
+</Page>

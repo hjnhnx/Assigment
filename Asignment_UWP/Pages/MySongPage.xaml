@@ -1,0 +1,52 @@
+﻿<Page
+    x:Class="Asignment_UWP.Pages.MySongPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Asignment_UWP.Pages"
+    xmlns:entity="using:Asignment_UWP.Entity"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel>
+        <StackPanel>
+            <ScrollViewer Height="455" MaxWidth="1000" VerticalScrollBarVisibility="Hidden">
+                <StackPanel>
+                    <ListView x:Name="MyListView" Tapped="MyListView_Tapped">
+                        <ListView.ItemTemplate>
+                            <DataTemplate x:DataType="entity:Song">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Ellipse x:Name="Ellipse" Grid.RowSpan="2" Width ="70" Height="70" Margin="6" 
+                                         VerticalAlignment="Center"
+                                         HorizontalAlignment="Center">
+                                        <Ellipse.Fill>
+                                            <ImageBrush ImageSource="{x:Bind thumbnail}"/>
+                                        </Ellipse.Fill>
+                                    </Ellipse>
+                                    <TextBlock Grid.Column="1" Text="{x:Bind name}" x:Phase="1" 
+                                           Style="{ThemeResource BaseTextBlockStyle}" 
+                                   Margin="12,6,0,0"/>
+                                    <TextBlock  Grid.Column="1" Grid.Row="1" Text="{x:Bind singer}" x:Phase="2" 
+                                            Style="{ThemeResource BaseTextBlockStyle}" 
+                                    Margin="12,0,0,6"/>
+                                </Grid>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackPanel>
+            </ScrollViewer>
+        </StackPanel>
+        <StackPanel>
+            <MediaPlayerElement x:Name="MyMediaPlayer" AutoPlay="True" AreTransportControlsEnabled="True" VerticalAlignment="Bottom"/>
+        </StackPanel>
+    </StackPanel>
+</Page>

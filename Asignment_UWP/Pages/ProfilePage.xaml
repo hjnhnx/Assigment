@@ -1,0 +1,22 @@
+﻿<Page
+    x:Class="Asignment_UWP.Pages.ProfilePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Asignment_UWP.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Image x:Name="avatar" Source="https://static01.nyt.com/images/2021/09/14/science/07CAT-STRIPES/07CAT-STRIPES-mediumSquareAt3X-v2.jpg" Margin="178,96,1133,729"></Image>
+        <TextBlock x:Name="fullName" HorizontalAlignment="Left" Margin="516,96,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="27" Width="475"><Run Text="Name"/><LineBreak/><Run/></TextBlock>
+        <TextBlock x:Name="email" HorizontalAlignment="Left" Margin="516,143,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="27" Width="475" Text="Email"/>
+        <TextBlock x:Name="address" HorizontalAlignment="Left" Margin="516,187,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="27" Width="475" Text="Address"/>
+        <TextBlock x:Name="birthday" HorizontalAlignment="Left" Margin="516,232,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="27" Width="475" Text="Birthday"/>
+        <TextBlock x:Name="fullName_Copy" HorizontalAlignment="Left" Margin="449,96,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="27" Width="42" Text="Name:"/>
+        <TextBlock x:Name="fullName_Copy1" HorizontalAlignment="Left" Margin="449,143,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="27" Width="42" Text="Email:"/>
+        <TextBlock x:Name="fullName_Copy2" HorizontalAlignment="Left" Margin="450,187,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="27" Width="64" Text="Address:"/>
+        <TextBlock x:Name="fullName_Copy3" HorizontalAlignment="Left" Margin="449,232,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="27" Width="64" Text="Birthday:"/>
+    </Grid>
+</Page>
